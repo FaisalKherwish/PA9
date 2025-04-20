@@ -1,0 +1,10 @@
+// simple main cpp
+#include "ObjectManager.hpp"
+#include "Objects.hpp"
+#include "Game.hpp"
+
+int main(void)
+{
+	Game game;
+	game.runGame();
+}
