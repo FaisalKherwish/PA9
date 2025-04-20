@@ -1,0 +1,31 @@
+// OBJECTS HPP main fruits objects not much changed
+#include "ObjectManager.hpp"
+
+class Watermelon : public ObjectManager
+{
+public:
+	Watermelon();
+	Watermelon(sf::Texture newSprite);
+
+};
+
+// OBJECTS CPP FILE also not much changed
+#include "Objects.hpp"
+#include "Utility.hpp"
+
+Watermelon::Watermelon() : ObjectManager()
+{
+	this->getShape().setFillColor(sf::Color::Red);
+	this->setPoints(1);
+	this->setName("Watermelon");
+	this->getShape().setPosition(sf::Vector2f(rng() % 880 + 100, 980));
+}
+
+Watermelon::Watermelon(sf::Texture newSprite) : ObjectManager()
+{
+	this->getShape().setFillColor(sf::Color::Red);
+	this->setPoints(1);
+	this->setName("Watermelon");
+	this->setSprite(newSprite);
+	this->getShape().setPosition(sf::Vector2f(rng() % 880 + 100, 980));
+}
