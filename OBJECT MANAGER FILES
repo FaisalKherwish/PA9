@@ -1,0 +1,127 @@
+//Object Manager HPP reworked some stuff
+
+#ifndef PA9
+#define PA9
+
+#include <iostream>
+#include <string>
+#include <SFML/Graphics.hpp>
+#include <ctime>
+#include <cstdlib>
+
+class ObjectManager
+{
+public:
+	ObjectManager();
+	~ObjectManager();
+
+	void setSprite(sf::Texture& texture);
+	void setPoints(const int newPoints);
+	void setName(std::string newName);
+	void setVelocity(const int newVelocity = 0);
+	std::string getName();
+
+	void changeColor(sf::Color newColor);
+
+	void draw(sf::RenderWindow& window);
+
+	sf::CircleShape& getShape();
+
+	const int getPoints();
+
+	void gravity();
+
+private:
+
+	int mPoints;
+	sf::CircleShape shape;
+	std::string name;
+	sf::Vector2f mVelocity;
+};
+
+#endif
+
+// OBJECT MANAGER CPP FILE also reworked some stuff
+//ObjectManager.cpp
+
+#include "ObjectManager.hpp"
+
+ObjectManager::ObjectManager()
+{
+	std::srand(std::time(nullptr));
+
+	double 	x = rand() % 1000;
+
+	sf::CircleShape s1(100.f);
+	this->name = "";
+	this->shape = s1;
+
+	shape.setFillColor(sf::Color::Cyan);
+	shape.setRadius(50);
+	shape.setPosition(sf::Vector2f(x, 1200));
+
+	this->mPoints = 0;
+	this->mVelocity = sf::Vector2f(0.f, -500.f); // initial "upward" throw velocity
+
+}
+
+ObjectManager::~ObjectManager()
+{
+	this->shape.setFillColor(sf::Color::Transparent);
+}
+
+sf::CircleShape& ObjectManager::getShape()
+{
+	return this->shape;
+}
+
+const int ObjectManager::getPoints()
+{
+	return this->mPoints;
+}
+
+
+void ObjectManager::gravity()
+{
+	if (mVelocity.y < 0) mVelocity.y += 0.15f;
+	else mVelocity.y += 0.15f;
+	
+	shape.move(mVelocity* 0.001f);
+}
+
+void ObjectManager::setSprite(sf::Texture& texture)
+{
+	this->shape.setTexture(&texture);
+}
+
+void ObjectManager::setPoints(const int newPoints)
+{
+	this->mPoints += newPoints;
+}
+
+void ObjectManager::setName(std::string newName)
+{
+	this->name = newName;
+}
+
+void ObjectManager::setVelocity(const int newVelocity)
+{
+	this->mVelocity.y = newVelocity;
+}
+
+std::string ObjectManager::getName()
+{
+	return this->name;
+}
+
+void ObjectManager::changeColor(sf::Color newColor)
+{
+	this->shape.setFillColor(newColor);
+
+}
+
+void ObjectManager::draw(sf::RenderWindow& window)
+{
+	window.draw(this->shape);
+}
+
