@@ -1,14 +1,13 @@
 #include "ObjectManager.hpp"
 
+
 class Watermelon : public ObjectManager
 {
 public:
 	Watermelon();
 	Watermelon(sf::Texture newSprite);
 
-
-private:
-	sf::Texture fruitSprite;
+	void changeSprite();
 
 };
 
@@ -17,6 +16,9 @@ class Kiwi : public ObjectManager
 public:
 	Kiwi();
 	Kiwi(sf::Texture newSprite);
+
+	void changeSprite();
+
 };
 
 class Orange : public ObjectManager
@@ -24,6 +26,9 @@ class Orange : public ObjectManager
 public:
 	Orange();
 	Orange(sf::Texture newSprite);
+
+	void changeSprite();
+
 };
 
 class Apple : public ObjectManager
@@ -31,6 +36,9 @@ class Apple : public ObjectManager
 public:
 	Apple();
 	Apple(sf::Texture newSprite);
+
+	void changeSprite();
+
 };
 
 
@@ -39,6 +47,9 @@ class Coconut : public ObjectManager
 public:
 	Coconut();
 	Coconut(sf::Texture newSprite);
+
+	void changeSprite();
+
 };
 
 class Dragonfruit : public ObjectManager
@@ -46,100 +57,183 @@ class Dragonfruit : public ObjectManager
 public:
 	Dragonfruit();
 	Dragonfruit(sf::Texture newSprite);
-};
 
+	void changeSprite();
+
+};
 // CPP
 #include "Objects.hpp"
-#include "Utility.hpp"
 
-Watermelon::Watermelon() : ObjectManager()
+Watermelon::Watermelon()
 {
-	this->getShape().setFillColor(sf::Color::Magenta);
+	double z = rand();
+
+	this->getShape().setFillColor(sf::Color::Cyan);
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
 	this->setName("Watermelon");
-	this->getShape().setPosition(sf::Vector2f(rng() % 880 + 100, 980));
+	
+
+	
 }
 
-Watermelon::Watermelon(sf::Texture newSprite) : ObjectManager()
+Watermelon::Watermelon(sf::Texture newSprite)
 {
-	this->getShape().setFillColor(sf::Color::Magenta);
+	double z = rand();
+
+	this->getShape().setFillColor(sf::Color::Cyan);
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
 	this->setName("Watermelon");
-	this->setSprite(newSprite);
-	this->getShape().setPosition(sf::Vector2f(rng() % 880 + 100, 980));
+	this->getShape().setTexture(&newSprite);
+
 }
 
-Kiwi::Kiwi() : ObjectManager()
+void Watermelon::changeSprite()
 {
+	sf::Texture tex;
+	tex.loadFromFile("Images/sprite_WatermelonD1.png");
+	this->getShape().setTexture(&tex);
+}
+
+Kiwi::Kiwi()
+{
+	double z = rand();
+
 	this->getShape().setFillColor(sf::Color::Green);
-	this->getShape().setPosition(sf::Vector2f(rng() % 880 + 100, 980));
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
 	this->setName("Kiwi");
+
 }
 
-Kiwi::Kiwi(sf::Texture newSprite) : ObjectManager()
+Kiwi::Kiwi(sf::Texture newSprite)
 {
+	double z = rand();
+
 	this->getShape().setFillColor(sf::Color::Green);
-	this->setSprite(newSprite);
-	this->getShape().setPosition(sf::Vector2f(rng() % 880 + 100, 980));
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
 	this->setName("Kiwi");
+	this->getShape().setTexture(&newSprite);
+
 }
 
-Orange::Orange() : ObjectManager()
+void Kiwi::changeSprite()
 {
+	sf::Texture tex;
+	tex.loadFromFile("Images/sprite_KiwiD1.png");
+	this->getShape().setTexture(&tex);
+}
+
+Orange::Orange()
+{
+	double z = rand();
+
 	this->getShape().setFillColor(sf::Color::Yellow);
-	this->getShape().setPosition(sf::Vector2f(rng() % 880 + 100, 980));
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
 	this->setName("Orange");
 }
 
-Orange::Orange(sf::Texture newSprite) : ObjectManager()
+Orange::Orange(sf::Texture newSprite)
 {
+	double z = rand();
+
 	this->getShape().setFillColor(sf::Color::Yellow);
-	this->setSprite(newSprite);
-	this->getShape().setPosition(sf::Vector2f(rng() % 880 + 100, 980));
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
 	this->setName("Orange");
+	this->getShape().setTexture(&newSprite);
 }
 
-Apple::Apple() : ObjectManager()
+void Orange::changeSprite()
 {
-	this->getShape().setFillColor(sf::Color::Red);
-	this->getShape().setPosition(sf::Vector2f(rng() % 880 + 100, 980));
-	this->setName("Apple");
+	sf::Texture tex;
+	tex.loadFromFile("Images/sprite_OrangeD1.png");
+	this->getShape().setTexture(&tex);
 }
 
-Apple::Apple(sf::Texture newSprite) : ObjectManager()
+Apple::Apple()
 {
 	double z = rand();
 
 	this->getShape().setFillColor(sf::Color::Red);
-	this->setSprite(newSprite);
-	this->getShape().setPosition(sf::Vector2f(rng() % 880 + 100, 980));
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
 	this->setName("Apple");
 }
 
-Coconut::Coconut() : ObjectManager()
+Apple::Apple(sf::Texture newSprite)
 {
-	this->getShape().setFillColor(sf::Color::White);
-	this->getShape().setPosition(sf::Vector2f(rng() % 880 + 100, 980));
+	double z = rand();
+
+	this->getShape().setFillColor(sf::Color::Red);
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
+	this->setName("Apple");
+	this->getShape().setTexture(&newSprite);
+}
+
+void Apple::changeSprite()
+{
+	sf::Texture tex;
+	tex.loadFromFile("Images/sprite_AppleD1.png");
+	this->getShape().setTexture(&tex);
+}
+
+Coconut::Coconut()
+{
+	double z = rand();
+
+	this->getShape().setFillColor(sf::Color::Magenta);
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
 	this->setName("Coconut");
 }
 
-Coconut::Coconut(sf::Texture newSprite) : ObjectManager()
+Coconut::Coconut(sf::Texture newSprite)
 {
-	this->getShape().setFillColor(sf::Color::White);
-	this->setSprite(newSprite);
-	this->getShape().setPosition(sf::Vector2f(rng() % 880 + 100, 980));
+	double z = rand();
+
+	this->getShape().setFillColor(sf::Color::Magenta);
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
 	this->setName("Coconut");
+	this->getShape().setTexture(&newSprite);
 }
 
-Dragonfruit::Dragonfruit() : ObjectManager()
+void Coconut::changeSprite()
 {
-	this->getShape().setFillColor(sf::Color::Blue);
-	this->getShape().setPosition(sf::Vector2f(rng() % 880 + 100, 980));
+	sf::Texture tex;
+	tex.loadFromFile("Images/sprite_CoconutD1.png");
+	this->getShape().setTexture(&tex);
+}
+
+Dragonfruit::Dragonfruit()
+{
+	double z = rand();
+
+	this->getShape().setFillColor(sf::Color::Red);
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
 	this->setName("Dragonfruit");
 }
 
-Dragonfruit::Dragonfruit(sf::Texture newSprite) : ObjectManager()
+Dragonfruit::Dragonfruit(sf::Texture newSprite)
 {
-	this->getShape().setFillColor(sf::Color::Blue);
-	this->setSprite(newSprite);
-	this->getShape().setPosition(sf::Vector2f(rng() % 880 + 100, 980));
+	double z = rand();
+
+	this->getShape().setFillColor(sf::Color::Red);
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
 	this->setName("Dragonfruit");
+	this->getShape().setTexture(&newSprite);
+}
+
+void Dragonfruit::changeSprite()
+{
+	sf::Texture tex;
+	tex.loadFromFile("Images/sprite_DragonFruitD1.png");
+	this->getShape().setTexture(&tex);
 }
