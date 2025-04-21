@@ -1,4 +1,4 @@
-//Object Manager HPP reworked some stuff
+//Object Manager File
 
 #ifndef PA9
 #define PA9
@@ -16,27 +16,24 @@ public:
 	~ObjectManager();
 
 	void setSprite(sf::Texture& texture);
-	void setPoints(const int newPoints);
 	void setName(std::string newName);
 	void setVelocity(const int newVelocity = 0);
-	bool getSliced();
 	void setSliced(bool newBool);
 
+	sf::CircleShape& getShape();
 	std::string getName();
+	bool getSliced();
 
 	void changeColor(sf::Color newColor);
 
 	void draw(sf::RenderWindow& window);
 
-	sf::CircleShape& getShape();
-
-	const int getPoints();
+	
 
 	void gravity();
 
 private:
 
-	int mPoints;
 	sf::CircleShape shape;
 	std::string name;
 	sf::Vector2f mVelocity;
@@ -45,7 +42,7 @@ private:
 
 #endif
 
-// OBJECT MANAGER CPP FILE also reworked some stuff
+// CPP
 //ObjectManager.cpp
 
 #include "ObjectManager.hpp"
@@ -59,12 +56,12 @@ ObjectManager::ObjectManager()
 	sf::CircleShape s1(100.f);
 	this->name = "";
 	this->shape = s1;
+	this->is_Sliced = false;
 
 	shape.setFillColor(sf::Color::Cyan);
 	shape.setRadius(50);
 	shape.setPosition(sf::Vector2f(x, 1200));
 
-	this->mPoints = 0;
 	this->mVelocity = sf::Vector2f(0.f, -500.f); // initial "upward" throw velocity
 
 }
@@ -77,11 +74,6 @@ ObjectManager::~ObjectManager()
 sf::CircleShape& ObjectManager::getShape()
 {
 	return this->shape;
-}
-
-const int ObjectManager::getPoints()
-{
-	return this->mPoints;
 }
 
 
@@ -98,11 +90,6 @@ void ObjectManager::setSprite(sf::Texture& texture)
 	this->shape.setTexture(&texture);
 }
 
-void ObjectManager::setPoints(const int newPoints)
-{
-	this->mPoints += newPoints;
-}
-
 void ObjectManager::setName(std::string newName)
 {
 	this->name = newName;
@@ -113,9 +100,19 @@ void ObjectManager::setVelocity(const int newVelocity)
 	this->mVelocity.y = newVelocity;
 }
 
+void ObjectManager::setSliced(bool newBool)
+{
+	this->is_Sliced = newBool;
+}
+
 std::string ObjectManager::getName()
 {
 	return this->name;
+}
+
+bool ObjectManager::getSliced()
+{
+	return this->is_Sliced;
 }
 
 void ObjectManager::changeColor(sf::Color newColor)
@@ -129,11 +126,3 @@ void ObjectManager::draw(sf::RenderWindow& window)
 	window.draw(this->shape);
 }
 
-bool getSliced()
-{
-return this->is_Sliced;
-}
-void setSliced(bool newBool)
-{
-this->is_Sliced = newBool;
-}
