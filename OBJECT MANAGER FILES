@@ -19,6 +19,9 @@ public:
 	void setPoints(const int newPoints);
 	void setName(std::string newName);
 	void setVelocity(const int newVelocity = 0);
+	bool getSliced();
+	void setSliced(bool newBool);
+
 	std::string getName();
 
 	void changeColor(sf::Color newColor);
@@ -37,6 +40,7 @@ private:
 	sf::CircleShape shape;
 	std::string name;
 	sf::Vector2f mVelocity;
+	bool is_Sliced;
 };
 
 #endif
@@ -125,3 +129,11 @@ void ObjectManager::draw(sf::RenderWindow& window)
 	window.draw(this->shape);
 }
 
+bool getSliced()
+{
+return this->is_Sliced;
+}
+void setSliced(bool newBool)
+{
+this->is_Sliced = newBool;
+}
