@@ -260,3 +260,37 @@ void Dragonfruit::changeSprite()
 	tex.loadFromFile("Images/sprite_DragonFruitD1.png");
 	this->getShape().setTexture(&tex);
 }
+
+Bomb::Bomb()
+{
+	double z = rand();
+
+	this->getShape().setFillColor(sf::Color::Red);
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
+	this->setName("Bomb");
+
+	sf::Texture tex;
+	tex.loadFromFile("Images/sprite_B1.png");
+	this->getShape().setTexture(&tex);
+
+}
+
+Bomb::Bomb(sf::Texture newSprite)
+{
+	double z = rand();
+
+	this->getShape().setFillColor(sf::Color::Red);
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
+	this->setName("Bomb");
+	this->getShape().setTexture(&newSprite);
+	
+}
+
+void Bomb::changeSprite()
+{
+	sf::Texture tex;
+	tex.loadFromFile("Images/sprite_B1D1.png");
+	this->getShape().setTexture(&tex);
+}
