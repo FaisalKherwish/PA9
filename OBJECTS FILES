@@ -65,3 +65,102 @@ Watermelon::Watermelon(sf::Texture newSprite) : ObjectManager()
 	this->setSprite(newSprite);
 	this->getShape().setPosition(sf::Vector2f(rng() % 880 + 100, 980));
 }
+Kiwi::Kiwi()
+{
+	double z = rand();
+
+	this->getShape().setFillColor(sf::Color::Red);
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
+	this->setName("Kiwi");
+}
+
+Kiwi::Kiwi(sf::Texture newSprite)
+{
+	double z = rand();
+
+	this->getShape().setFillColor(sf::Color::Red);
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
+	this->setName("Kiwi");
+}
+
+Orange::Orange()
+{
+	double z = rand();
+
+	this->getShape().setFillColor(sf::Color::Red);
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
+	this->setName("Orange");
+}
+
+Orange::Orange(sf::Texture newSprite)
+{
+	double z = rand();
+
+	this->getShape().setFillColor(sf::Color::Red);
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
+	this->setName("Orange");
+}
+
+Apple::Apple()
+{
+	double z = rand();
+
+	this->getShape().setFillColor(sf::Color::Red);
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
+	this->setName("Apple");
+}
+
+Apple::Apple(sf::Texture newSprite)
+{
+	double z = rand();
+
+	this->getShape().setFillColor(sf::Color::Red);
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
+	this->setName("Apple");
+}
+
+Coconut::Coconut()
+{
+	double z = rand();
+
+	this->getShape().setFillColor(sf::Color::Red);
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
+	this->setName("Coconut");
+}
+
+Coconut::Coconut(sf::Texture newSprite)
+{
+	double z = rand();
+
+	this->getShape().setFillColor(sf::Color::Red);
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
+	this->setName("Coconut");
+}
+
+Dragonfruit::Dragonfruit()
+{
+	double z = rand();
+
+	this->getShape().setFillColor(sf::Color::Red);
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
+	this->setName("Dragonfruit");
+}
+
+Dragonfruit::Dragonfruit(sf::Texture newSprite)
+{
+	double z = rand();
+
+	this->getShape().setFillColor(sf::Color::Red);
+	this->setPoints(1);
+	this->getShape().setPosition(sf::Vector2f(z, 1200));
+	this->setName("Dragonfruit");
+}
