@@ -73,6 +73,9 @@ Watermelon::Watermelon()
 	this->getShape().setPosition(sf::Vector2f(z, 1200));
 	this->setName("Watermelon");
 	
+	sf::Texture tex;
+	tex.loadFromFile("Images/sprite_Watermelon.png");
+	this->getShape().setTexture(&tex);
 
 	
 }
@@ -105,6 +108,10 @@ Kiwi::Kiwi()
 	this->getShape().setPosition(sf::Vector2f(z, 1200));
 	this->setName("Kiwi");
 
+	sf::Texture tex;
+	tex.loadFromFile("Images/sprite_Kiwi.png");
+	this->getShape().setTexture(&tex);
+
 }
 
 Kiwi::Kiwi(sf::Texture newSprite)
@@ -134,6 +141,10 @@ Orange::Orange()
 	this->setPoints(1);
 	this->getShape().setPosition(sf::Vector2f(z, 1200));
 	this->setName("Orange");
+	
+	sf::Texture tex;
+	tex.loadFromFile("Images/sprite_Orange0.png");
+	this->getShape().setTexture(&tex);
 }
 
 Orange::Orange(sf::Texture newSprite)
@@ -162,6 +173,10 @@ Apple::Apple()
 	this->setPoints(1);
 	this->getShape().setPosition(sf::Vector2f(z, 1200));
 	this->setName("Apple");
+
+	sf::Texture tex;
+	tex.loadFromFile("Images/sprite_Apple.png");
+	this->getShape().setTexture(&tex);
 }
 
 Apple::Apple(sf::Texture newSprite)
@@ -190,6 +205,10 @@ Coconut::Coconut()
 	this->setPoints(1);
 	this->getShape().setPosition(sf::Vector2f(z, 1200));
 	this->setName("Coconut");
+
+	sf::Texture tex;
+	tex.loadFromFile("Images/sprite_Coconut.png");
+	this->getShape().setTexture(&tex);
 }
 
 Coconut::Coconut(sf::Texture newSprite)
@@ -218,6 +237,10 @@ Dragonfruit::Dragonfruit()
 	this->setPoints(1);
 	this->getShape().setPosition(sf::Vector2f(z, 1200));
 	this->setName("Dragonfruit");
+
+	sf::Texture tex;
+	tex.loadFromFile("Images/sprite_DragonFruit.png");
+	this->getShape().setTexture(&tex);
 }
 
 Dragonfruit::Dragonfruit(sf::Texture newSprite)
