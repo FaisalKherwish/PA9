@@ -9,6 +9,42 @@ public:
 
 };
 
+class Kiwi : public ObjectManager
+{
+public:
+	Kiwi();
+	Kiwi(sf::Texture newSprite);
+};
+
+class Orange : public ObjectManager
+{
+public:
+	Orange();
+	Orange(sf::Texture newSprite);
+};
+
+class Apple : public ObjectManager
+{
+public:
+	Apple();
+	Apple(sf::Texture newSprite);
+};
+
+
+class Coconut : public ObjectManager
+{
+public:
+	Coconut();
+	Coconut(sf::Texture newSprite);
+};
+
+class Dragonfruit : public ObjectManager
+{
+public:
+	Dragonfruit();
+	Dragonfruit(sf::Texture newSprite);
+};
+
 // OBJECTS CPP FILE also not much changed
 #include "Objects.hpp"
 #include "Utility.hpp"
