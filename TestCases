@@ -1,3 +1,22 @@
+//hpp
+#include "Objects.hpp"
+
+class TestCases
+{
+public:
+
+	void testGravity();
+	void testFontLoad();
+	void testSlice();
+	void testDraw();
+	void testSpriteChange();
+
+
+
+
+};
+
+//Cpp
 #include "TestCases.hpp"
 #include <fstream>
 
