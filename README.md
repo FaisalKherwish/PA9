@@ -4,9 +4,9 @@ Faisal Kherwish : 11879926
 Shane Taylor : 011785132
 
 
-PS: The project is included with a folder name "Sources", this folder contains the fonts, sfml library, and an "Assets" folder containing sprites.
+PS: The project is included the font and an "Assets" folder containing sprites and backgrounds.
 Loading fonts might break leading to some errors with the absolute path provided and actual path of the project.
-It will work provided the absolute path where the folder is, issue is unresolved as of now.
+It will work provided the absolute path where the folder is, currently works with path provided for user's device.
 
 Fruit Slicers :
 
