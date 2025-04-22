@@ -1,0 +1,15 @@
+﻿  Game.cpp
+C:\Users\ThemN\OneDrive\Desktop\Project\Sources\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'Game.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      C:\Users\ThemN\OneDrive\Desktop\Project\Sources\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(94,23): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(170,49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(316,40): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(319,40): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(322,40): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(80,1): warning C4715: 'Game::mainMenu': not all control paths return a value
+  SFMLTesting.vcxproj -> C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\x64\Debug\SFMLTesting.exe
