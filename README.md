@@ -16,3 +16,4 @@ Watch out past 7 minutes, the game will get intensely more difficult!
 Slice the fruits, avoid the bombs, reach the highest score possible!
 
 Fanmade project, no relation to Fruit Ninja or Halfbrick
+Made for CPT_S 122, PA 9
