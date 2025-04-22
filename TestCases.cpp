@@ -1,18 +1,6 @@
 #include "TestCases.hpp"
 #include <fstream>
 
-int testCaseMain(void)
-{
-
-
-
-	return 0;
-}
-
-
-
-
-
 
 void TestCases::testGravity()
 {
