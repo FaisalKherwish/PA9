@@ -1,0 +1,86 @@
+﻿  Game.cpp
+C:\Users\ThemN\OneDrive\Desktop\Project\Sources\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'Game.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      C:\Users\ThemN\OneDrive\Desktop\Project\Sources\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(89,23): warning C4834: discarding return value of function with [[nodiscard]] attribute
+C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(165,49): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(187,31): error C2065: 'i': undeclared identifier
+C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(187,16): error C2530: 'fruit': references must be initialized
+C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(188,4): error C3536: 'fruit': cannot be used before it is initialized
+C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(199,18): error C2665: 'std::vector<std::unique_ptr<ObjectManager,std::default_delete<ObjectManager>>,std::allocator<std::unique_ptr<ObjectManager,std::default_delete<ObjectManager>>>>::erase': no overloaded function could convert all the argument types
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vector(1747,27):
+      could be 'std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>> std::vector<_Ty,std::allocator<_Ty>>::erase(std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>) noexcept(<expr>)'
+          with
+          [
+              _Ty=std::unique_ptr<ObjectManager,std::default_delete<ObjectManager>>
+          ]
+          C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(199,18):
+          'std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>> std::vector<_Ty,std::allocator<_Ty>>::erase(std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>) noexcept(<expr>)': cannot convert argument 1 from 'int' to 'std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>'
+          with
+          [
+              _Ty=std::unique_ptr<ObjectManager,std::default_delete<ObjectManager>>
+          ]
+              C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(199,24):
+              'std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>::_Vector_const_iterator': no overloaded function could convert all the argument types
+          with
+          [
+              _Ty=std::unique_ptr<ObjectManager,std::default_delete<ObjectManager>>
+          ]
+                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vector(225,1):
+                  could be 'std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>::_Vector_const_iterator(std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>> &&)'
+          with
+          [
+              _Ty=std::unique_ptr<ObjectManager,std::default_delete<ObjectManager>>
+          ]
+                      C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(199,24):
+                      'std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>::_Vector_const_iterator(std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>> &&)': cannot convert argument 1 from 'int' to 'std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>> &&'
+          with
+          [
+              _Ty=std::unique_ptr<ObjectManager,std::default_delete<ObjectManager>>
+          ]
+                          C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(199,24):
+                          Reason: cannot convert from 'int' to 'std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>'
+          with
+          [
+              _Ty=std::unique_ptr<ObjectManager,std::default_delete<ObjectManager>>
+          ]
+                          C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(199,24):
+                          Conversion requires a second user-defined-conversion operator or constructor
+                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vector(225,1):
+                  or       'std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>::_Vector_const_iterator(const std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>> &)'
+          with
+          [
+              _Ty=std::unique_ptr<ObjectManager,std::default_delete<ObjectManager>>
+          ]
+                      C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(199,24):
+                      'std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>::_Vector_const_iterator(const std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>> &)': cannot convert argument 1 from 'int' to 'const std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>> &'
+          with
+          [
+              _Ty=std::unique_ptr<ObjectManager,std::default_delete<ObjectManager>>
+          ]
+                          C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(199,24):
+                          Reason: cannot convert from 'int' to 'const std::_Vector_const_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>'
+          with
+          [
+              _Ty=std::unique_ptr<ObjectManager,std::default_delete<ObjectManager>>
+          ]
+                          C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(199,24):
+                          Conversion requires a second user-defined-conversion operator or constructor
+                  C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(199,24):
+                  while trying to match the argument list '(int)'
+      C:\Users\ThemN\OneDrive\Desktop\Project\SFMLTesting\SFMLTesting\Game.cpp(199,18):
+      while trying to match the argument list '(int)'
+  
+  main.cpp
+C:\Users\ThemN\OneDrive\Desktop\Project\Sources\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'main.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept(100,19):
+      see declaration of 'std::runtime_error'
+      C:\Users\ThemN\OneDrive\Desktop\Project\Sources\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+  Generating Code...
