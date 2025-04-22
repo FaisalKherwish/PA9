@@ -17,3 +17,5 @@ Slice the fruits, avoid the bombs, reach the highest score possible!
 
 Fanmade project, no relation to Fruit Ninja or Halfbrick
 Made for CPT_S 122, PA 9
+
+Screen Castify Link for Video Demonstration: https://app.screencastify.com/v3/watch/mTx9hGQgmFf8jI05aZrI
